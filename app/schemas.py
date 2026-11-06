@@ -1,6 +1,6 @@
 from typing import Annotated
 
-from pydantic import BaseModel, ConfigDict, EmailStr, Field, StringConstraints
+from pydantic import BaseModel, ConfigDict, Field, StringConstraints
 StudentIdStr=Annotated[str,StringConstraints(pattern=r"^ST[A-Z]{2}\d{4}$")]
 DescriptionStr=Annotated[str,StringConstraints(min_length=5, max_length=100)]
 
